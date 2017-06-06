@@ -13,3 +13,10 @@ store.dispatch({type: 'NEXT'});
 // You can get the current state any time:
 store.getState();
 */
+import {createStore} from 'redux';
+import reducer from './reducer';
+
+export default function makeStore() {
+  console.log("Reducer: " + reducer);
+  return createStore(reducer);
+}
